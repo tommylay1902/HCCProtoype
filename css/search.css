@@ -1,36 +1,77 @@
+body {
+  background-color: #e6e9f0
+}
+
 .zoom {
     padding: 1em;
-    padding-bottom:35em;
+    padding-bottom:32em;
     transition: transform .4s;
     width: 399px;
-    height: 500px;
-    margin:auto;
+    height: 399px;
+    /* margin:auto; */
     margin:10px;
+    margin-bottom:8em;
     border-radius:10px;
-    background-color:white;
+    background-color:#e6e9f0;
   }
 
   .shareContainer{
     transition: .5s ease;
     opacity: 0;
-    /* transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%); */
-    margin-left:1.5em;
-    margin-top:2em;
+    padding-top:2em;
+    padding-bottom:2em
   }
 
   .zoom:hover .shareContainer{
     opacity: 1;
-    transform: scale(1); 
-
+    /* transform: scale(1);  */
   }
 
   .zoom:hover .imgZoom{
     transform: scale(1.1)
   }
-
-  .imgZoom:hover{
-    color:black;
-    transform: scale(1.1);
   
+  .shareButton{
+    color:#e6e9f0;
+    background-color:#2b2d2f;
+  }
+  .shareButton:hover{
+    color:#e6e9f0;
+    background-color:#257ca3;
+
+  }
+
+  .watchListButton{
+    color:#e6e9f0;
+    background-color:#2b2d2f;
+
+  }
+
+  .watchListButton:hover{
+    color:#e6e9f0;
+    background-color:#4fc879;
+
+  }
+
+  .detailsButton{
+    color:#e6e9f0;
+    background-color:#2b2d2f;
+  }
+
+  .detailsButton:hover{
+    color:#e6e9f0;
+    background-color:#7D26CD;
+
+  }
+
+  .playButton{
+    color:#e6e9f0;
+    background-color:#2b2d2f;
+    padding:1em
+  }
+
+  .playButton:hover{
+    color:#e6e9f0;
+    background-color:#ff0000;
+
   }

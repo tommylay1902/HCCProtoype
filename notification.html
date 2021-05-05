@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+    <link rel="stylesheet" href="./css/notification.css">
     <script>
         function searchNextPage() {
             const searchCriteria = document.getElementById("searchInput")
@@ -22,8 +22,8 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Among Friends</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"><strong>Among Friends</strong></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -74,7 +74,7 @@
                 </select>
                 <input id="searchInput" class="form-control mr-2" style="height:2.5em; padding-left:4.75em"
                     type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
             </form>
             <ul>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-4"
@@ -136,7 +136,7 @@
                 <div class="container d-flex flex-row justify-content-between align-items-center">
                     <div>
                         <p class="font-weight-light" style="display: inline">
-                            Received today
+                            Received <br /> 2H Ago
                         </p>
                     </div>
                     <div class="container d-flex flex-row justify-content-end align-items-center">
@@ -187,7 +187,7 @@
                 <div class="container d-flex flex-row justify-content-between align-items-center">
                     <div>
                         <p class="font-weight-light" style="display: inline">
-                            Received 5/2/2021
+                            Received Yesterday
                         </p>
                     </div>
                     <div class="container d-flex flex-row justify-content-end align-items-center">
