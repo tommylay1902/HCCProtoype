@@ -1,0 +1,36 @@
+.zoom {
+    padding: 1em;
+    padding-bottom:35em;
+    transition: transform .4s;
+    width: 399px;
+    height: 500px;
+    margin:auto;
+    margin:10px;
+    border-radius:10px;
+    background-color:white;
+  }
+
+  .shareContainer{
+    transition: .5s ease;
+    opacity: 0;
+    /* transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%); */
+    margin-left:1.5em;
+    margin-top:2em;
+  }
+
+  .zoom:hover .shareContainer{
+    opacity: 1;
+    transform: scale(1); 
+
+  }
+
+  .zoom:hover .imgZoom{
+    transform: scale(1.1)
+  }
+
+  .imgZoom:hover{
+    color:black;
+    transform: scale(1.1);
+  
+  }
