@@ -141,15 +141,14 @@
                     </div>
                     <div class="container d-flex flex-row justify-content-end align-items-center">
                         <div style="padding-right: 20px">
-                            <button type="button" class="btn btn-dark"
-                                style="text-align: center; vertical-align: middle">
+                            <button type="button" class="btn btnAdd" style="text-align: center; vertical-align: middle">
                                 <span>Add to Watchlist</span>
                             </button>
                         </div>
                         <div>
-                            <button type="button" class="btn btn-dark"
+                            <button type="button" class="btn btnLaunch"
                                 style="text-align: center; vertical-align: middle" data-toggle="modal"
-                                data-target="#launchModal">
+                                data-target="#breakingBadModal">
                                 <span>Watch in Netflix</span>
                             </button>
                         </div>
@@ -192,16 +191,16 @@
                     </div>
                     <div class="container d-flex flex-row justify-content-end align-items-center">
                         <div style="padding-right: 20px">
-                            <button type="button" class="btn btn-dark"
+                            <button type="button " class="btn btnAdd"
                                 style="text-align: center; vertical-align: middle">
                                 <span>Add to Watchlist</span>
                             </button>
                         </div>
                         <div>
-                            <button type="button" class="btn btn-dark"
+                            <button type="button" class="btn btnLaunch"
                                 style="text-align: center; vertical-align: middle" data-toggle="modal"
                                 data-target="#launchModal">
-                                <span>Watch in Netflix</span>
+                                <span>Listen in Spotify</span>
                             </button>
                         </div>
                     </div>
@@ -249,16 +248,15 @@
                     </div>
                     <div class="container d-flex flex-row justify-content-end align-items-center">
                         <div style="padding-right: 20px">
-                            <button type="button" class="btn btn-dark"
-                                style="text-align: center; vertical-align: middle">
+                            <button type="button" class="btn btnAdd" style="text-align: center; vertical-align: middle">
                                 <span>Add to Watchlist</span>
                             </button>
                         </div>
                         <div>
-                            <button type="button" class="btn btn-dark"
+                            <button type="button" class="btn btnLaunch"
                                 style="text-align: center; vertical-align: middle" data-toggle="modal"
                                 data-target="#launchModal">
-                                <span>Watch in Netflix</span>
+                                <span>Watch in Hulu</span>
                             </button>
                         </div>
                     </div>
@@ -267,10 +265,10 @@
         </div>
     </div>
 
-    <div class="modal fade" id="launchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="breakingBadModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
+            <div class="modal-content" style="width:40em;">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">
                         Breaking Bad <span style="color: gray">S1E1</span>
@@ -281,15 +279,25 @@
                 </div>
                 <div class="modal-body">
                     <div class="container">
-                        <div>
-                            <img src="./images/breakingbad.jpg" class="img-thumbnail" />
+                        <div class="d-flex flex-row align-items-center">
+                            <div>
+                                <img src="./images/breakingbad.jpg"
+                                    style="width:400px; height:400px; object-fit:contain;" />
+                            </div>
+                            <div>
+                                <span style="font-weight:bold; font-size:1.5em">Breaking Bad</span>
+                                <div>
+                                    Drama (2008-2013)
+                                </div>
+                            </div>
                         </div>
-                        <div style="vertical-align: center; justify-content: center">
+
+                        <div style=" vertical-align: center; justify-content: center">
                             <hr />
                             <div class="d-flex flex-row justify-content-between">
                                 <div>
                                     <span style="text-align: center">
-                                        Choose what device to launch service in
+                                        Choose what device to launch <strong>Netflix</strong> in
                                     </span>
                                     <div class="collapse navbar-collapse" id="navbar-list-4">
                                         <ul class="navbar-nav">

@@ -1,3 +1,22 @@
 body {
     background-color: #e6e9f0
 }
+
+button {
+    transition: .5 ease;
+    color:#e6e9f0;
+    background-color:#2b2d2f;
+
+}
+
+.btnLaunch:hover{
+    transform:scale(1.1);
+    background-color:#FF0000;
+}
+
+
+.btnAdd:hover{
+    color:#e6e9f0;
+    background-color:#4fc879;
+    transform:scale(1.1);
+}
