@@ -1,361 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recommendations</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="./css/notification.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/notification.css" />
     <script>
-        function searchNextPage() {
-            const searchCriteria = document.getElementById("searchInput")
-            const filter = document.getElementById("filter")
-            window.location.href = `search.html?s=${searchCriteria.value}&searchFilter=${filter.value}`;
-            return false;
-        }
+      function searchNextPage() {
+        const searchCriteria = document.getElementById("searchInput");
+        const filter = document.getElementById("filter");
+        window.location.href = `search.html?s=${searchCriteria.value}&searchFilter=${filter.value}`;
+        return false;
+      }
     </script>
-</head>
+  </head>
 
-<body>
+  <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html"><strong>Among Friends</strong></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="index.html"><strong>Among Friends</strong></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+          </li>
+
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Notifications </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="./notification.html">Recommendations <span style="background-color: red; border-radius: 15px; padding: 3px 8px; color: white">3</span></a>
+                <a class="dropdown-item" href="#">Friend Requests</a>
+                <a class="dropdown-item" href="#">Other</a>
+              </div>
+            </li>
+          </ul>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Watchlist </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Add +</a>
+              <a class="dropdown-item" href="#">Drama Watch List</a>
+              <a class="dropdown-item" href="#">Light Hearted List</a>
+            </div>
+          </li>
+        </ul>
+
+        <form class="form-inline" onsubmit="return searchNextPage()">
+          <select style="height: 2.5em; position: absolute" name="searchFilter" id="filter">
+            <option value="All">All</option>
+            <option value="Movie">Movie</option>
+            <option value="Tv">Tv</option>
+            <option value="Music">Music</option>
+            <option value="Live">Live</option>
+            <option>Profiles</option>
+          </select>
+          <input id="searchInput" class="form-control mr-2" style="height: 2.5em; padding-left: 5.2em" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <ul>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-4" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
-                </li>
-
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown active">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Notifications
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="./notification.html">Recommendations <span
-                                    style="background-color:red; border-radius:15px; padding: 3px 8px; color:white">3</span></a>
-                            <a class="dropdown-item" href="#">Friend Requests</a>
-                            <a class="dropdown-item" href="#">Other</a>
-                        </div>
-                    </li>
-                </ul>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Watchlist
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Add +</a>
-                        <a class="dropdown-item" href="#">Drama Watch List</a>
-                        <a class="dropdown-item" href="#">Light Hearted List</a>
-                    </div>
-                </li>
-            </ul>
-
-            <form class="form-inline" onsubmit="return searchNextPage()">
-                <select style="height:2.5em; position:absolute;" name="searchFilter" id="filter">
-                    <option value="All">All</option>
-                    <option value="Movie">Movie</option>
-                    <option value="Tv">Tv</option>
-                    <option value="Music">Music</option>
-                    <option value="Live">Live</option>
-                    <option>Profiles</option>
-                </select>
-                <input id="searchInput" class="form-control mr-2" style="height:2.5em; padding-left:5.2em" type="search"
-                    placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-            </form>
-            <ul>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-4"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbar-list-4">
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown ">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg"
-                                    width="50" height="50" class="rounded-circle">
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Dashboard</a>
-                                <a class="dropdown-item" href="#">Edit Profile</a>
-                                <a class="dropdown-item" href="#">Log Out</a>
-                            </div>
-                        </li>
-                    </ul>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar-list-4">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg" width="50" height="50" class="rounded-circle" />
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Dashboard</a>
+                  <a class="dropdown-item" href="#">Edit Profile</a>
+                  <a class="dropdown-item" href="#">Log Out</a>
                 </div>
+              </li>
             </ul>
-        </div>
+          </div>
+        </ul>
+      </div>
     </nav>
     <div class="container d-flex align-items-center justify-content-center">
-        <h1>Recommendations</h1>
+      <h1>Recommendations</h1>
     </div>
     <div class="container d-flex align-items-center" style="margin-top: 5em">
-        <div class="card" style="width: 100%">
-            <div class="card-body">
-                <div class="d-flex flex-row">
-                    <div>
-                        <span class="material-icons-outlined">
-                            <i class="material-icons" style="color: gray; font-size: 9.5em">account_circle</i>
-                        </span>
-                    </div>
-                    <div>
-                        <h5 class="card-title" style="font-weight: bold">John Doe</h5>
-                        <span>Check out the first season! One of my favorite tv series</span>
-                        <div style="margin-top: 2em">
-                            <h3>
-                                Breaking Bad
-                                <span style="font-size: 0.75em; color: gray">Season 1</span>
-                            </h3>
-                        </div>
-                        <div>
-                            <p class="card-text">
-                                When chemistry teacher Walter White is diagnosed with Stage III
-                                cancer and given only two years to live, he decides he has nothing
-                                to lose. He lives with his teenage son, who has cerebral palsy,
-                                and his wife, in New Mexico. Determined to ensure that his family
-                                will have a secure future, Walt embarks on a career of crime...
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <hr />
-                <div class="container d-flex flex-row justify-content-between align-items-center">
-                    <div>
-                        <p class="font-weight-light" style="display: inline">
-                            Received <br /> 2h Ago
-                        </p>
-                    </div>
-                    <div class="container d-flex flex-row justify-content-end align-items-center">
-                        <div style="padding-right: 20px">
-                            <button type="button" class="btn btnAdd" style="text-align: center; vertical-align: middle">
-                                <span>Add to Watchlist</span>
-                            </button>
-                        </div>
-                        <div>
-                            <button type="button" class="btn btnLaunch"
-                                style="text-align: center; vertical-align: middle" data-toggle="modal"
-                                data-target="#breakingBadModal">
-                                <span>Watch in Netflix</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+      <div class="card" style="width: 100%">
+        <div class="card-body">
+          <div class="d-flex flex-row">
+            <div>
+              <span class="material-icons-outlined">
+                <i class="material-icons" style="color: gray; font-size: 9.5em">account_circle</i>
+              </span>
             </div>
+            <div>
+              <h5 class="card-title" style="font-weight: bold">John Doe</h5>
+              <span>Check out the first season! One of my favorite tv series</span>
+              <div style="margin-top: 2em">
+                <h3>
+                  Breaking Bad
+                  <span style="font-size: 0.75em; color: gray">Season 1</span>
+                </h3>
+              </div>
+              <div>
+                <p class="card-text">
+                  When chemistry teacher Walter White is diagnosed with Stage III cancer and given only two years to live, he decides he has nothing to lose. He lives with his teenage son, who has cerebral palsy, and his wife, in New
+                  Mexico. Determined to ensure that his family will have a secure future, Walt embarks on a career of crime...
+                </p>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="container d-flex flex-row justify-content-between align-items-center">
+            <div>
+              <p class="font-weight-light" style="display: inline">
+                Received <br />
+                2h Ago
+              </p>
+            </div>
+            <div class="container d-flex flex-row justify-content-end align-items-center">
+              <div style="padding-right: 20px">
+                <button type="button" class="btn btnAdd" style="text-align: center; vertical-align: middle">
+                  <span>Add to Watchlist</span>
+                </button>
+              </div>
+              <div>
+                <button type="button" class="btn btnLaunch" style="text-align: center; vertical-align: middle" data-toggle="modal" data-target="#breakingBadModal">
+                  <span>Watch in Netflix</span>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <div class="container d-flex align-items-center" style="margin-top: 5em">
-        <div class="card" style="width: 100%">
-            <!-- <img class="card-img-top" src="./images/breakingbad.jpg" alt="Card image cap"> -->
-            <div class="card-body">
-                <div class="d-flex flex-row">
-                    <div>
-                        <span class="material-icons-outlined">
-                            <i class="material-icons" style="color: gray; font-size: 9.5em">account_circle</i>
-                        </span>
-                    </div>
-                    <div>
-                        <h5 class="card-title" style="font-weight: bold">Jane Smith</h5>
-                        <span>Here are some songs I've been listening to lately</span>
-                        <div style="margin-top: 2em">
-                            <h3>
-                                Jane's Hip-Hop Mix
-                                <span style="font-size: 0.75em; color: gray">
-                                    (Playlist) 30 Songs - 126 minutes
-                                </span>
-                            </h3>
-                        </div>
-                        <div>
-                            <p class="card-text">
-                                I mixed some classics and contemporary tunes, just for you!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <hr />
-                <div class="container d-flex flex-row justify-content-between align-items-center">
-                    <div>
-                        <p class="font-weight-light" style="display: inline">
-                            Received Yesterday
-                        </p>
-                    </div>
-                    <div class="container d-flex flex-row justify-content-end align-items-center">
-                        <div style="padding-right: 20px">
-                            <button type="button " class="btn btnAdd"
-                                style="text-align: center; vertical-align: middle">
-                                <span>Save Playlist</span>
-                            </button>
-                        </div>
-                        <div>
-                            <button type="button" class="btn btnLaunch"
-                                style="text-align: center; vertical-align: middle" data-toggle="modal"
-                                data-target="#launchModal">
-                                <span>Listen in Spotify</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+      <div class="card" style="width: 100%">
+        <!-- <img class="card-img-top" src="./images/breakingbad.jpg" alt="Card image cap"> -->
+        <div class="card-body">
+          <div class="d-flex flex-row">
+            <div>
+              <span class="material-icons-outlined">
+                <i class="material-icons" style="color: gray; font-size: 9.5em">account_circle</i>
+              </span>
             </div>
+            <div>
+              <h5 class="card-title" style="font-weight: bold">Jane Smith</h5>
+              <span>Here are some songs I've been listening to lately</span>
+              <div style="margin-top: 2em">
+                <h3>
+                  Jane's Hip-Hop Mix
+                  <span style="font-size: 0.75em; color: gray"> (Playlist) 30 Songs - 126 minutes </span>
+                </h3>
+              </div>
+              <div>
+                <p class="card-text">I mixed some classics and contemporary tunes, just for you!</p>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+          <div class="container d-flex flex-row justify-content-between align-items-center">
+            <div>
+              <p class="font-weight-light" style="display: inline">Received Yesterday</p>
+            </div>
+            <div class="container d-flex flex-row justify-content-end align-items-center">
+              <div style="padding-right: 20px">
+                <button type="button " class="btn btnAdd" style="text-align: center; vertical-align: middle">
+                  <span>Save Playlist</span>
+                </button>
+              </div>
+              <div>
+                <button type="button" class="btn btnLaunch" style="text-align: center; vertical-align: middle" data-toggle="modal" data-target="#launchModal">
+                  <span>Listen in Spotify</span>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <div class="container d-flex align-items-center" style="margin-top: 5em">
-        <div class="card" style="width: 100%">
-            <!-- <img class="card-img-top" src="./images/breakingbad.jpg" alt="Card image cap"> -->
-            <div class="card-body">
-                <div class="d-flex flex-row">
-                    <div>
-                        <span class="material-icons-outlined">
-                            <i class="material-icons" style="color: gray; font-size: 9.5em">account_circle</i>
-                        </span>
-                    </div>
-                    <div>
-                        <h5 class="card-title" style="font-weight: bold">Alice Brown</h5>
-                        <span>I agree, Sean Connery and Pierce Brosnan were great but you cant
-                            ignore this movie forever, watch this ASAP or else!</span>
-                        <div style="margin-top: 2em">
-                            <h3>
-                                Casino Royale
-                                <span style="font-size: 0.75em; color: gray"> (2006)</span>
-                            </h3>
-                        </div>
-                        <div>
-                            <p class="card-text">
-                                Daniel Craig makes his debut as the newly minted agent 007, who's
-                                pitted against an infamous financier of global terrorism -- at the
-                                poker table.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+      <div class="card" style="width: 100%">
+        <!-- <img class="card-img-top" src="./images/breakingbad.jpg" alt="Card image cap"> -->
+        <div class="card-body">
+          <div class="d-flex flex-row">
+            <div>
+              <span class="material-icons-outlined">
+                <i class="material-icons" style="color: gray; font-size: 9.5em">account_circle</i>
+              </span>
+            </div>
+            <div>
+              <h5 class="card-title" style="font-weight: bold">Alice Brown</h5>
+              <span>I agree, Sean Connery and Pierce Brosnan were great but you cant ignore this movie forever, watch this ASAP or else!</span>
+              <div style="margin-top: 2em">
+                <h3>
+                  Casino Royale
+                  <span style="font-size: 0.75em; color: gray"> (2006)</span>
+                </h3>
+              </div>
+              <div>
+                <p class="card-text">Daniel Craig makes his debut as the newly minted agent 007, who's pitted against an infamous financier of global terrorism -- at the poker table.</p>
+              </div>
+            </div>
+          </div>
 
+          <hr />
+          <div class="container d-flex flex-row justify-content-between align-items-center">
+            <div>
+              <p class="font-weight-light" style="display: inline">Received 4/30/2021</p>
+            </div>
+            <div class="container d-flex flex-row justify-content-end align-items-center">
+              <div style="padding-right: 20px">
+                <button type="button" class="btn btnAdd" style="text-align: center; vertical-align: middle">
+                  <span>Add to Watchlist</span>
+                </button>
+              </div>
+              <div>
+                <button type="button" class="btn btnLaunch" style="text-align: center; vertical-align: middle" data-toggle="modal" data-target="#launchModal">
+                  <span>Watch in Hulu</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="breakingBadModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content" style="width: 40em">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Breaking Bad <span style="color: gray">S1E1</span></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="d-flex flex-row align-items-center">
+                <div>
+                  <img src="./images/breakingbad.jpg" style="width: 400px; height: 400px; object-fit: contain" />
+                </div>
+                <div>
+                  <span style="font-weight: bold; font-size: 1.5em">Breaking Bad</span>
+                  <div>Drama (2008-2013)</div>
+                </div>
+              </div>
+
+              <div style="vertical-align: center; justify-content: center">
+                <div style="visibility: hidden">
+                  <hr />
+                </div>
+                <div class="d-flex flex-row justify-content-between">
+                  <div>
+                    <span style="text-align: center">
+                      <strong>Select a streaming device:</strong>
+                    </span>
+                  </div>
+                </div>
                 <hr />
-                <div class="container d-flex flex-row justify-content-between align-items-center">
-                    <div>
-                        <p class="font-weight-light" style="display: inline">
-                            Received 4/30/2021
-                        </p>
-                    </div>
-                    <div class="container d-flex flex-row justify-content-end align-items-center">
-                        <div style="padding-right: 20px">
-                            <button type="button" class="btn btnAdd" style="text-align: center; vertical-align: middle">
-                                <span>Add to Watchlist</span>
-                            </button>
-                        </div>
-                        <div>
-                            <button type="button" class="btn btnLaunch"
-                                style="text-align: center; vertical-align: middle" data-toggle="modal"
-                                data-target="#launchModal">
-                                <span>Watch in Hulu</span>
-                            </button>
-                        </div>
-                    </div>
+                <div class="d-flex flex-row justify-content-between">
+                  <div>
+                    <label class="form-check-label" for="flexRadioDefault"> This device </label>
+                  </div>
+                  <div>
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault" />
+                  </div>
                 </div>
+              </div>
+              <div>
+                <hr />
+
+                <div class="d-flex flex-row justify-content-between">
+                  <div>
+                    <label class="form-check-label" for="flexRadioDefault2"> Samsung Smart TV (default) </label>
+                  </div>
+                  <div>
+                    <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault2" checked />
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="modal-footer justify-content-between d-flex flex-row">
+            <a class="button" href="mainpage.html" data-dismiss="modal">Cancel</a>
+            <a href="pageload.html" class="button" target="_blank">Watch Breaking Bad</a>
+          </div>
         </div>
+      </div>
     </div>
 
-    <div class="modal fade" id="breakingBadModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content" style="width:40em;">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        Breaking Bad <span style="color: gray">S1E1</span>
-                    </h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                        <div class="d-flex flex-row align-items-center">
-                            <div>
-                                <img src="./images/breakingbad.jpg"
-                                    style="width:400px; height:400px; object-fit:contain;" />
-                            </div>
-                            <div>
-                                <span style="font-weight:bold; font-size:1.5em">Breaking Bad</span>
-                                <div>
-                                    Drama (2008-2013)
-                                </div>
-                            </div>
-                        </div>
-
-                        <div style="vertical-align: center; justify-content: center">
-                            <div style="visibility: hidden">
-                                <hr />
-                            </div>
-                            <div class="d-flex flex-row justify-content-between">
-                                <div>
-                                    <span style="text-align: center">
-                                        <strong>Select a streaming device:</strong>
-                                    </span>
-                                </div>
-
-                            </div>
-                            <hr />
-                            <div class="d-flex flex-row justify-content-between">
-                                <div>
-                                    <label class="form-check-label" for="flexRadioDefault">
-                                        This device
-                                    </label>
-                                </div>
-                                <div>
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                        id="flexRadioDefault" />
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <hr />
-
-                            <div class="d-flex flex-row justify-content-between">
-                                <div>
-                                    <label class="form-check-label" for="flexRadioDefault2">
-                                        Samsung Smart TV (default)
-                                    </label>
-                                </div>
-                                <div>
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault2"
-                                        id="flexRadioDefault2" checked />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer justify-content-between d-flex flex-row">
-                    <a class="button" href="mainpage.html" data-dismiss="modal">Cancel</a>
-                    <a href="pageload.html" class="button" target="_blank">Watch Breaking Bad</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
-</body>
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
 </html>
