@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
     <link rel="stylesheet" href="./css/mainpage.css" />
+    <link rel="stylesheet" href="./css/global.css" />
     <script>
       function searchNextPage() {
         const searchCriteria = document.getElementById("searchInput");
@@ -88,32 +89,47 @@
       </div>
     </nav>
 
-    <div class="container d-flex align-items-center" style="margin-top: 5em">
-      <div class="card" style="width: 100%">
-        <div class="card-body">
-          <div class="d-flex flex-row">
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      Welcome! Have a look at the <a href="#" class="alert-link" data-toggle="modal" data-target="#welcomeModal">instructions</a> before trying out this prototype.
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="welcomeModalLabel">Welcome to Among Friends!</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Among Friends is an online service that lets you and share and receive streaming recommendations with your friends and family.
             <div>
-              <span class="material-icons-outlined">
-                <i class="material-icons" style="color: gray; font-size: 9.5em">groups</i>
-              </span>
-            </div>
-            <div>
-              <h2 class="card-title" style="font-weight: bold">Welcome to Among Friends!</h2>
-              <span>Among Friends is an online service that lets you and share and receive streaming recommendations with your friends and family.</span>
               <div style="margin-top: 2em">
-                <h3>Instructions:</h3>
+                <h3>Instructions</h3>
               </div>
-              <div>
-                <p class="card-text">In this prototype you can try the following:</p>
-                <ol>
-                  <li>Check out the inbox of received recommendations.</li>
-                  <li>Search for streaming media.</li>
-                  <li>Select an item to send recommendations.</li>
-                </ol>
-              </div>
+              <p class="card-text">In this prototype you can try the following:</p>
+              <ol>
+                <li>Check out the inbox of received recommendations.</li>
+                <li>Search for streaming media.</li>
+                <li>Select an item to send recommendations.</li>
+              </ol>
             </div>
           </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Got it!</button>
+          </div>
         </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h4 class="border-bottom border-gray pb-2 mb-0">Activity feed</h4>
+      <p>something</p>
       </div>
     </div>
 
