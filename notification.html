@@ -127,7 +127,7 @@
 
       <div class="my-3 p-3 bg-white rounded shadow-sm">
         <div class="d-flex flex-row justify-content-between">
-          <h5 class="pb-2 mb-0">Jane's Hip-Hop Playlist<span style="font-size: 0.75em; color: gray"> 72 Songs - 302 minutes</span></h5>
+          <h5 class="pb-2 mb-0">Jane's Hip-Hop Mix<span style="font-size: 0.75em; color: gray"> 72 Songs - 302 minutes</span></h5>
           <h5><span class="badge badge-info">Music</span></h5>
         </div>
         <p class="media-body text-dark pb-3 mb-0 medium lh-125 border-bottom border-gray">A mix of some classics and contemporary tunes.</p>
@@ -150,7 +150,7 @@
             <button type="button" class="btn btnAdd" style="text-align: center; vertical-align: middle">
               <span>Save Playlist</span>
             </button>
-            <button type="button" class="btn btnLaunch" style="margin-left: 5px" style="text-align: center; vertical-align: middle" data-toggle="modal" data-target="#breakingBadModal">
+            <button type="button" class="btn btnLaunch" style="margin-left: 5px" style="text-align: center; vertical-align: middle" data-toggle="modal" data-target="#musicPlaylistModal">
               <span>Listen in Spotify</span>
             </button>
           </div>
@@ -159,10 +159,14 @@
 
       <div class="my-3 p-3 bg-white rounded shadow-sm">
         <div class="d-flex flex-row justify-content-between">
-          <h5 class="pb-2 mb-0">Casino Royale<span style="font-size: 0.75em; color: gray"> (2006)</span></h5>
+          <h5 class="pb-2 mb-0">Skyfall<span style="font-size: 0.75em; color: gray"> (2012)</span></h5>
           <h5><span class="badge badge-info">Movie</span></h5>
         </div>
-        <p class="media-body text-dark pb-3 mb-0 medium lh-125 border-bottom border-gray">Daniel Craig makes his debut as the newly minted agent 007, who's pitted against an infamous financier of global terrorism -- at the poker table.</p>
+        <p class="media-body text-dark pb-3 mb-0 medium lh-125 border-bottom border-gray">
+          When James Bond's (Daniel Craig) latest assignment goes terribly wrong, it leads to a calamitous turn of events: Undercover agents around the world are exposed, and MI6 is attacked, forcing M (Judi Dench) to relocate the agency.
+          With MI6 now compromised inside and out, M turns to the one man she can trust: Bond. Aided only by a field agent (Naomie Harris), Bond takes to the shadows and follows a trail to Silva (Javier Bardem), a man from M's past who
+          wants to settle an old score.
+        </p>
         <div class="media text-body pt-3">
           <div>
             <span class="material-icons-outlined">
@@ -182,7 +186,7 @@
             <button type="button" class="btn btnAdd" style="text-align: center; vertical-align: middle">
               <span>Add to Watchlist</span>
             </button>
-            <button type="button" class="btn btnLaunch" style="margin-left: 5px" style="text-align: center; vertical-align: middle" data-toggle="modal" data-target="#breakingBadModal">
+            <button type="button" class="btn btnLaunch" style="margin-left: 5px" style="text-align: center; vertical-align: middle" data-toggle="modal" data-target="#huluModal">
               <span>Watch in Hulu</span>
             </button>
           </div>
@@ -214,7 +218,7 @@
             <button type="button" class="btn btnAdd" style="text-align: center; vertical-align: middle">
               <span>Add to Watchlist</span>
             </button>
-            <button type="button" class="btn btnLaunch" style="margin-left: 5px" style="text-align: center; vertical-align: middle" data-toggle="modal" data-target="#breakingBadModal">
+            <button type="button" class="btn btnLaunch" style="margin-left: 5px" style="text-align: center; vertical-align: middle" data-toggle="modal" data-target="#youtubeModal">
               <span>Watch in YouTube</span>
             </button>
           </div>
@@ -222,11 +226,14 @@
       </div>
     </div>
 
+    <!-- modals below -->
+
+    <!-- netflix: bb -->
     <div class="modal fade" id="breakingBadModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
-        <div class="modal-content" style="width: 40em">
+        <form class="modal-content" id="openStream" style="width: 40em">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Breaking Bad <span style="color: gray">S1E1</span></h5>
+            <h5 class="modal-title" id="exampleModalLabel">Stream with Netflix</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -237,57 +244,232 @@
                 <div>
                   <img src="./images/breakingbad.jpg" style="width: 400px; height: 400px; object-fit: contain" />
                 </div>
-                <div>
-                  <span style="font-weight: bold; font-size: 1.5em">Breaking Bad</span>
+                <div class="p-left">
+                  <span style="font-weight: bold; font-size: 1.5em">Breaking Bad <span style="color: gray">S1E1</span></span>
                   <div>Drama (2008-2013)</div>
                 </div>
               </div>
 
-              <div style="vertical-align: center; justify-content: center">
-                <div style="visibility: hidden">
-                  <hr />
-                </div>
-                <div class="d-flex flex-row justify-content-between">
-                  <div>
-                    <span style="text-align: center">
-                      <strong>Select a streaming device:</strong>
-                    </span>
-                  </div>
-                </div>
+              <div style="visibility: hidden">
                 <hr />
-                <div class="d-flex flex-row justify-content-between">
-                  <div>
-                    <label class="form-check-label" for="flexRadioDefault"> This device </label>
-                  </div>
-                  <div>
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault" />
-                  </div>
+              </div>
+              <div class="d-flex flex-row justify-content-between">
+                <div>
+                  <span style="text-align: center">
+                    <strong>Select a streaming device:</strong>
+                  </span>
                 </div>
               </div>
-              <div>
-                <hr />
-
-                <div class="d-flex flex-row justify-content-between">
-                  <div>
-                    <label class="form-check-label" for="flexRadioDefault2"> Samsung Smart TV (default) </label>
-                  </div>
-                  <div>
-                    <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault2" checked />
-                  </div>
+              <hr />
+              <div class="d-flex flex-row justify-content-between">
+                <div>
+                  <label class="form-check-label" for="current">This device</label>
+                </div>
+                <div>
+                  <input class="form-check-input" type="radio" name="deviceSelection" id="current" value="breakingbad" />
+                </div>
+              </div>
+              <hr />
+              <div class="d-flex flex-row justify-content-between">
+                <div>
+                  <label class="form-check-label" for="external">Samsung Smart TV (default)</label>
+                </div>
+                <div>
+                  <input class="form-check-input" type="radio" name="deviceSelection" id="external" value="external" checked />
                 </div>
               </div>
             </div>
           </div>
           <div class="modal-footer justify-content-between d-flex flex-row">
             <a class="button" href="mainpage.html" data-dismiss="modal">Cancel</a>
-            <a href="pageload.html" class="button" target="_blank">Watch Breaking Bad</a>
+            <button type="submit" class="btn btn-success">Watch Breaking Bad</button>
           </div>
-        </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- spotify playlist -->
+    <div class="modal fade" id="musicPlaylistModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <form class="modal-content" id="openStream2" style="width: 40em">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Stream with Spotify</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="d-flex flex-row align-items-center">
+                <div>
+                  <img src="./images/playlist.jpg" style="width: 280; height: 280; object-fit: contain" />
+                </div>
+                <div class="p-left">
+                  <span style="font-weight: bold; font-size: 1.5em">Jane's Hip-Hop Mix <span style="color: gray">72 Songs - 302 minutes</span></span>
+                  <div>Playlist</div>
+                </div>
+              </div>
+
+              <div style="visibility: hidden">
+                <hr />
+              </div>
+              <div class="d-flex flex-row justify-content-between">
+                <div>
+                  <span style="text-align: center">
+                    <strong>Select a streaming device:</strong>
+                  </span>
+                </div>
+              </div>
+              <hr />
+              <div class="d-flex flex-row justify-content-between">
+                <div>
+                  <label class="form-check-label" for="current2">This device</label>
+                </div>
+                <div>
+                  <input class="form-check-input" type="radio" name="deviceSelection" id="current2" value="spotify" />
+                </div>
+              </div>
+              <hr />
+              <div class="d-flex flex-row justify-content-between">
+                <div>
+                  <label class="form-check-label" for="external2">Samsung Smart TV (default)</label>
+                </div>
+                <div>
+                  <input class="form-check-input" type="radio" name="deviceSelection" id="external2" value="external2" checked />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer justify-content-between d-flex flex-row">
+            <a class="button" href="mainpage.html" data-dismiss="modal">Cancel</a>
+            <button type="submit" class="btn btn-success">Listen to Playlist</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- hulu: ??? -->
+    <div class="modal fade" id="huluModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <form class="modal-content" id="openStream3" style="width: 40em">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Stream with Hulu</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="d-flex flex-row align-items-center">
+                <div>
+                  <img src="./images/skyfall.jpg" style="width: 400px; height: 400px; object-fit: contain" />
+                </div>
+                <div class="p-left">
+                  <span style="font-weight: bold; font-size: 1.5em">Skyfall <span style="color: gray">(2012)</span></span>
+                  <div>Action</div>
+                </div>
+              </div>
+
+              <div style="visibility: hidden">
+                <hr />
+              </div>
+              <div class="d-flex flex-row justify-content-between">
+                <div>
+                  <span style="text-align: center">
+                    <strong>Select a streaming device:</strong>
+                  </span>
+                </div>
+              </div>
+              <hr />
+              <div class="d-flex flex-row justify-content-between">
+                <div>
+                  <label class="form-check-label" for="current3">This device</label>
+                </div>
+                <div>
+                  <input class="form-check-input" type="radio" name="deviceSelection" id="current3" value="skyfall" />
+                </div>
+              </div>
+              <hr />
+              <div class="d-flex flex-row justify-content-between">
+                <div>
+                  <label class="form-check-label" for="external3">Samsung Smart TV (default)</label>
+                </div>
+                <div>
+                  <input class="form-check-input" type="radio" name="deviceSelection" id="external3" value="external3" checked />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer justify-content-between d-flex flex-row">
+            <a class="button" href="mainpage.html" data-dismiss="modal">Cancel</a>
+            <button type="submit" class="btn btn-success">Watch Skyfall</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- youtube vid -->
+    <div class="modal fade" id="youtubeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <form class="modal-content" id="openStream4" style="width: 40em">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Stream with YouTube</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="d-flex flex-row align-items-center">
+                <div>
+                  <img src="./images/dogs.jpg" style="width: 280px; height: 280px; object-fit: contain" />
+                </div>
+                <div class="p-left">
+                  <span style="font-weight: bold; font-size: 1.5em">Golden Retriever Dad Babysits Puppies</span>
+                  <div>Odin and Sassa</div>
+                </div>
+              </div>
+
+              <div style="visibility: hidden">
+                <hr />
+              </div>
+              <div class="d-flex flex-row justify-content-between">
+                <div>
+                  <span style="text-align: center">
+                    <strong>Select a streaming device:</strong>
+                  </span>
+                </div>
+              </div>
+              <hr />
+              <div class="d-flex flex-row justify-content-between">
+                <div>
+                  <label class="form-check-label" for="current4">This device</label>
+                </div>
+                <div>
+                  <input class="form-check-input" type="radio" name="deviceSelection" id="current4" value="youtube" />
+                </div>
+              </div>
+              <hr />
+              <div class="d-flex flex-row justify-content-between">
+                <div>
+                  <label class="form-check-label" for="external4">Samsung Smart TV (default)</label>
+                </div>
+                <div>
+                  <input class="form-check-input" type="radio" name="deviceSelection" id="external4" value="external4" checked />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer justify-content-between d-flex flex-row">
+            <a class="button" href="mainpage.html" data-dismiss="modal">Cancel</a>
+            <button type="submit" class="btn btn-success">Watch Video</button>
+          </div>
+        </form>
       </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./js/openStream.js"></script>
   </body>
 </html>
