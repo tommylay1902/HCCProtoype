@@ -1,5 +1,4 @@
 window.onload = function () {
-  const body = document.getElementById("body");
   const searchCriteria = document.getElementById("searchInput");
   const queryString = window.location.search;
 
@@ -17,15 +16,12 @@ window.onload = function () {
   document.getElementById("title").innerText = filterValue;
 
   const buildBody = async () => {
-    const results = await fetch(
-      `https://www.omdbapi.com/?s=${searchValue}&apikey=c6a37cad`
-    );
+    const results = await fetch(`https://www.omdbapi.com/?s=${searchValue}&apikey=c6a37cad`);
     const { Search } = await results.json();
     let i = 1;
 
     let row = document.createElement("div");
-    row.className =
-      "d-flex flex-row justify-content-center align-items-center mt-30";
+    row.className = "d-flex flex-row justify-content-center align-items-center mt-30";
     Search.forEach((el) => {
       if (i !== 10) {
         const imgContainer = document.createElement("div");
@@ -43,8 +39,7 @@ window.onload = function () {
         overlay.className = "shareContainer d-flex flex-row";
 
         const shareButton = document.createElement("button");
-        shareButton.innerHTML =
-          "<span><i  class='material-icons'>share</i> <span>Share</span></span>";
+        shareButton.innerHTML = "<span><i  class='material-icons'>share</i> <span>Share</span></span>";
 
         shareButton.className = `shareButton btn ml-2 ${el.imdbID}`;
 
@@ -57,9 +52,10 @@ window.onload = function () {
           while (parent.firstChild) {
             parent.removeChild(parent.firstChild);
           }
-          document.getElementById("exampleModalLabel").innerText =
-            "Share With Friends Or Groups";
-          document.getElementById("movieTitle").innerText = el.Title;
+          document.getElementById("exampleModalLabel").innerText = "Share With Friends Or Groups";
+          const movieTitle = document.getElementById("movieTitle");
+          movieTitle.innerText = el.Title;
+
           const imgContainer = document.createElement("div");
           const img = document.createElement("img");
           img.src = el.Poster;
@@ -70,20 +66,17 @@ window.onload = function () {
         };
 
         const details = document.createElement("button");
-        details.innerHTML =
-          "<span><i class='material-icons'>more_horiz</i> <span>More</span></span>";
+        details.innerHTML = "<span><i class='material-icons'>more_horiz</i> <span>More</span></span>";
         details.className = "detailsButton btn ml-2";
         details.type = "button";
 
         const watchlist = document.createElement("button");
 
-        watchlist.innerHTML =
-          "<span><i class='material-icons'>playlist_add</i> <span>Add</span></span>";
+        watchlist.innerHTML = "<span><i class='material-icons'>playlist_add</i> <span>Add</span></span>";
         watchlist.className = "watchListButton btn  ml-2";
 
         const play = document.createElement("button");
-        play.innerHTML =
-          "<span><i class='material-icons'>play_arrow</i> <span>Play</span></span>";
+        play.innerHTML = "<span><i class='material-icons'>play_arrow</i> <span>Play</span></span>";
         play.className = "playButton btn";
 
         overlay.appendChild(play);
@@ -99,8 +92,7 @@ window.onload = function () {
 
       if (i % 3 === 0) {
         row = document.createElement("div");
-        row.className =
-          "d-flex flex-row justify-content-center align-items-center mt-6";
+        row.className = "d-flex flex-row justify-content-center align-items-center mt-6";
       }
       i++;
     });
@@ -113,4 +105,8 @@ function searchNextPage() {
   const filter = document.getElementById("filter");
   window.location.href = `search.html?s=${searchCriteria.value}&searchFilter=${filter.value}`;
   return false;
+}
+
+function loadStatus() {
+  const confirmModal = document.getElementById("confirmModal");
 }
