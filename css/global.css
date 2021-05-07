@@ -1,3 +1,10 @@
 .container {
   padding-top: 20px;
 }
+
+.p-left {
+  padding-left: 6px;
+}
+.m-left {
+  margin-left: 12px;
+}
