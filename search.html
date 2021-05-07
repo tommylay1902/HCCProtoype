@@ -136,9 +136,9 @@
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Notifications </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item" href="./notification.html">Recommendations <span
-                  style="background-color: red; border-radius: 15px; padding: 3px 8px; color: white">3</span></a>
-              <a class="dropdown-item" href="#">Friend Requests</a>
-              <a class="dropdown-item" href="#">Other</a>
+                  style="background-color: red; border-radius: 15px; padding: 3px 8px; color: white">4</span></a>
+              <a class="dropdown-item" disabled href="#">Friend Requests</a>
+              <a class="dropdown-item" disabled href="#">Other</a>
             </div>
           </li>
         </ul>
@@ -147,21 +147,21 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false"> Watchlist </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Add +</a>
-            <a class="dropdown-item" href="#">Drama Watch List</a>
-            <a class="dropdown-item" href="#">Light Hearted List</a>
+            <a class="dropdown-item" disabled href="#">Add +</a>
+            <a class="dropdown-item" disabled href="#">Drama Watch List</a>
+            <a class="dropdown-item" disabled href="#">Light Hearted List</a>
           </div>
         </li>
       </ul>
 
       <form class="form-inline" onsubmit="return searchNextPage()">
         <select style="height: 2.5em; position: absolute" name="searchFilter" id="filter">
-          <option value="All">All</option>
-          <option value="Movie">Movie</option>
-          <option value="Tv">Tv</option>
-          <option value="Music">Music</option>
-          <option value="Live">Live</option>
-          <option>Profiles</option>
+          <option value="All" disabled>All</option>
+          <option value="Movie" selected>Movie</option>
+          <option value="Tv" disabled>Tv</option>
+          <option value="Music" disabled>Music</option>
+          <option value="Video" disabled>Video</option>
+          <option disabled>Profiles</option>
         </select>
         <input id="searchInput" class="form-control mr-2" style="height: 2.5em; padding-left: 5.2em" type="search"
           placeholder="Search" aria-label="Search" />
@@ -181,9 +181,9 @@
                   width="50" height="50" class="rounded-circle" />
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Dashboard</a>
-                <a class="dropdown-item" href="#">Edit Profile</a>
-                <a class="dropdown-item" href="#">Log Out</a>
+                <a class="dropdown-item" disabled href="#">Dashboard</a>
+                <a class="dropdown-item" disabled href="#">Edit Profile</a>
+                <a class="dropdown-item" disabled href="#">Log Out</a>
               </div>
             </li>
           </ul>
