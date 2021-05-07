@@ -33,7 +33,3 @@ button[type="submit"]::after {
   margin: 0 3px 0 5px;
   filter: brightness(0) invert(1);
 }
-
-.p-left {
-  padding-left: 6px;
-}

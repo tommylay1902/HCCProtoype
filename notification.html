@@ -138,15 +138,18 @@
   </nav>
   <div class="container">
 
-    <div class="d-flex flex-row">
-      <h4 class="border-bottom border-gray pb-2 mb-0">Recommendations</h4>
-      <select id="recFilter">
-        <option selected>All</option>
-        <option>TV</option>
-        <option>Music</option>
-        <option>Movie</option>
-        <option>Video</option>
-      </select>
+    <div class="border-bottom border-gray pb-2 mb-0 d-flex flex-row  justify-content-between">
+      <h4 class="">Recommendations</h4>
+      <div>
+        <label for="recFilter">Filter:</label>
+        <select id="recFilter" class="p-left m-left">
+          <option selected>All</option>
+          <option>TV</option>
+          <option>Music</option>
+          <option>Movie</option>
+          <option>Video</option>
+        </select>
+      </div>
     </div>
 
     <div id="TV" class="my-3 p-3 bg-white rounded shadow-sm">
