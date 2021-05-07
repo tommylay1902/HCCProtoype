@@ -1,5 +1,5 @@
 const pageRedirect = () => {
-  var delay = 3000; // time in milliseconds
+  var delay = 8000; // time in milliseconds
 
   setTimeout(function () {
     window.location.href = `success.html`;
