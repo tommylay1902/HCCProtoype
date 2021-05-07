@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="./css/notification.css" />
+    <link rel="stylesheet" href="./css/global.css" />
     <script>
       function searchNextPage() {
         const searchCriteria = document.getElementById("searchInput");
@@ -86,149 +87,136 @@
         </ul>
       </div>
     </nav>
-    <div class="container d-flex align-items-center justify-content-center">
-      <h1>Recommendations</h1>
-    </div>
-    <div class="container d-flex align-items-center" style="margin-top: 5em">
-      <div class="card" style="width: 100%">
-        <div class="card-body">
-          <div class="d-flex flex-row">
-            <div>
-              <span class="material-icons-outlined">
-                <i class="material-icons" style="color: gray; font-size: 9.5em">account_circle</i>
-              </span>
-            </div>
-            <div>
-              <h5 class="card-title" style="font-weight: bold">John Doe</h5>
-              <span>Check out the first season! One of my favorite tv series</span>
-              <div style="margin-top: 2em">
-                <h3>
-                  Breaking Bad
-                  <span style="font-size: 0.75em; color: gray">Season 1</span>
-                </h3>
-              </div>
-              <div>
-                <p class="card-text">
-                  When chemistry teacher Walter White is diagnosed with Stage III cancer and given only two years to live, he decides he has nothing to lose. He lives with his teenage son, who has cerebral palsy, and his wife, in New
-                  Mexico. Determined to ensure that his family will have a secure future, Walt embarks on a career of crime...
-                </p>
-              </div>
-            </div>
+    <div class="container">
+      <h4 class="border-bottom border-gray pb-2 mb-0">Recommendations</h4>
+
+      <div class="my-3 p-3 bg-white rounded shadow-sm">
+        <div class="d-flex flex-row justify-content-between">
+          <h5 class="pb-2 mb-0">Breaking Bad<span style="font-size: 0.75em; color: gray"> Season 1</span></h5>
+          <h5><span class="badge badge-info">TV Series</span></h5>
+        </div>
+        <p class="media-body text-dark pb-3 mb-0 medium lh-125 border-bottom border-gray">
+          When chemistry teacher Walter White is diagnosed with Stage III cancer and given only two years to live, he decides he has nothing to lose. He lives with his teenage son, who has cerebral palsy, and his wife, in New Mexico.
+          Determined to ensure that his family will have a secure future, Walt embarks on a career of crime...
+        </p>
+        <div class="media text-body pt-3">
+          <div>
+            <span class="material-icons-outlined">
+              <i class="material-icons" style="color: gray; font-size: 3em">account_circle</i>
+            </span>
           </div>
-          <hr />
-          <div class="container d-flex flex-row justify-content-between align-items-center">
-            <div>
-              <p class="font-weight-light" style="display: inline">
-                Received <br />
-                2h Ago
-              </p>
-            </div>
-            <div class="container d-flex flex-row justify-content-end align-items-center">
-              <div style="padding-right: 20px">
-                <button type="button" class="btn btnAdd" style="text-align: center; vertical-align: middle">
-                  <span>Add to Watchlist</span>
-                </button>
-              </div>
-              <div>
-                <button type="button" class="btn btnLaunch" style="text-align: center; vertical-align: middle" data-toggle="modal" data-target="#breakingBadModal">
-                  <span>Watch in Netflix</span>
-                </button>
-              </div>
-            </div>
+
+          <p class="media-body pb-3 mb-0 medium lh-125">
+            <strong class="d-block">John Doe</strong>
+            Check out the first season! One of my favorite tv series
+          </p>
+        </div>
+        <hr />
+        <div class="d-flex flex-row justify-content-between">
+          <p class="font-weight-light" style="display: inline">Received 2h ago</p>
+          <div>
+            <button type="button" class="btn btnAdd" style="text-align: center; vertical-align: middle">
+              <span>Add to Watchlist</span>
+            </button>
+            <button type="button" class="btn btnLaunch" style="margin-left: 5px" style="text-align: center; vertical-align: middle" data-toggle="modal" data-target="#breakingBadModal">
+              <span>Watch in Netflix</span>
+            </button>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="container d-flex align-items-center" style="margin-top: 5em">
-      <div class="card" style="width: 100%">
-        <!-- <img class="card-img-top" src="./images/breakingbad.jpg" alt="Card image cap"> -->
-        <div class="card-body">
-          <div class="d-flex flex-row">
-            <div>
-              <span class="material-icons-outlined">
-                <i class="material-icons" style="color: gray; font-size: 9.5em">account_circle</i>
-              </span>
-            </div>
-            <div>
-              <h5 class="card-title" style="font-weight: bold">Jane Smith</h5>
-              <span>Here are some songs I've been listening to lately</span>
-              <div style="margin-top: 2em">
-                <h3>
-                  Jane's Hip-Hop Mix
-                  <span style="font-size: 0.75em; color: gray"> (Playlist) 30 Songs - 126 minutes </span>
-                </h3>
-              </div>
-              <div>
-                <p class="card-text">I mixed some classics and contemporary tunes, just for you!</p>
-              </div>
-            </div>
+      <div class="my-3 p-3 bg-white rounded shadow-sm">
+        <div class="d-flex flex-row justify-content-between">
+          <h5 class="pb-2 mb-0">Jane's Hip-Hop Playlist<span style="font-size: 0.75em; color: gray"> 72 Songs - 302 minutes</span></h5>
+          <h5><span class="badge badge-info">Music</span></h5>
+        </div>
+        <p class="media-body text-dark pb-3 mb-0 medium lh-125 border-bottom border-gray">A mix of some classics and contemporary tunes.</p>
+        <div class="media text-body pt-3">
+          <div>
+            <span class="material-icons-outlined">
+              <i class="material-icons" style="color: gray; font-size: 3em">account_circle</i>
+            </span>
           </div>
 
-          <hr />
-          <div class="container d-flex flex-row justify-content-between align-items-center">
-            <div>
-              <p class="font-weight-light" style="display: inline">Received Yesterday</p>
-            </div>
-            <div class="container d-flex flex-row justify-content-end align-items-center">
-              <div style="padding-right: 20px">
-                <button type="button " class="btn btnAdd" style="text-align: center; vertical-align: middle">
-                  <span>Save Playlist</span>
-                </button>
-              </div>
-              <div>
-                <button type="button" class="btn btnLaunch" style="text-align: center; vertical-align: middle" data-toggle="modal" data-target="#launchModal">
-                  <span>Listen in Spotify</span>
-                </button>
-              </div>
-            </div>
+          <p class="media-body pb-3 mb-0 medium lh-125">
+            <strong class="d-block">Jane Smith</strong>
+            Here are some songs I've been listening to lately
+          </p>
+        </div>
+        <hr />
+        <div class="d-flex flex-row justify-content-between">
+          <p class="font-weight-light" style="display: inline">Received yesterday</p>
+          <div>
+            <button type="button" class="btn btnAdd" style="text-align: center; vertical-align: middle">
+              <span>Save Playlist</span>
+            </button>
+            <button type="button" class="btn btnLaunch" style="margin-left: 5px" style="text-align: center; vertical-align: middle" data-toggle="modal" data-target="#breakingBadModal">
+              <span>Listen in Spotify</span>
+            </button>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="container d-flex align-items-center" style="margin-top: 5em">
-      <div class="card" style="width: 100%">
-        <!-- <img class="card-img-top" src="./images/breakingbad.jpg" alt="Card image cap"> -->
-        <div class="card-body">
-          <div class="d-flex flex-row">
-            <div>
-              <span class="material-icons-outlined">
-                <i class="material-icons" style="color: gray; font-size: 9.5em">account_circle</i>
-              </span>
-            </div>
-            <div>
-              <h5 class="card-title" style="font-weight: bold">Alice Brown</h5>
-              <span>I agree, Sean Connery and Pierce Brosnan were great but you cant ignore this movie forever, watch this ASAP or else!</span>
-              <div style="margin-top: 2em">
-                <h3>
-                  Casino Royale
-                  <span style="font-size: 0.75em; color: gray"> (2006)</span>
-                </h3>
-              </div>
-              <div>
-                <p class="card-text">Daniel Craig makes his debut as the newly minted agent 007, who's pitted against an infamous financier of global terrorism -- at the poker table.</p>
-              </div>
-            </div>
+      <div class="my-3 p-3 bg-white rounded shadow-sm">
+        <div class="d-flex flex-row justify-content-between">
+          <h5 class="pb-2 mb-0">Casino Royale<span style="font-size: 0.75em; color: gray"> (2006)</span></h5>
+          <h5><span class="badge badge-info">Movie</span></h5>
+        </div>
+        <p class="media-body text-dark pb-3 mb-0 medium lh-125 border-bottom border-gray">Daniel Craig makes his debut as the newly minted agent 007, who's pitted against an infamous financier of global terrorism -- at the poker table.</p>
+        <div class="media text-body pt-3">
+          <div>
+            <span class="material-icons-outlined">
+              <i class="material-icons" style="color: gray; font-size: 3em">account_circle</i>
+            </span>
           </div>
 
-          <hr />
-          <div class="container d-flex flex-row justify-content-between align-items-center">
-            <div>
-              <p class="font-weight-light" style="display: inline">Received 4/30/2021</p>
-            </div>
-            <div class="container d-flex flex-row justify-content-end align-items-center">
-              <div style="padding-right: 20px">
-                <button type="button" class="btn btnAdd" style="text-align: center; vertical-align: middle">
-                  <span>Add to Watchlist</span>
-                </button>
-              </div>
-              <div>
-                <button type="button" class="btn btnLaunch" style="text-align: center; vertical-align: middle" data-toggle="modal" data-target="#launchModal">
-                  <span>Watch in Hulu</span>
-                </button>
-              </div>
-            </div>
+          <p class="media-body pb-3 mb-0 medium lh-125">
+            <strong class="d-block">Alice Brown</strong>
+            I agree, Sean Connery and Pierce Brosnan were great but you cant ignore this movie forever, watch this ASAP or else!
+          </p>
+        </div>
+        <hr />
+        <div class="d-flex flex-row justify-content-between">
+          <p class="font-weight-light" style="display: inline">Received 4/30/2021</p>
+          <div>
+            <button type="button" class="btn btnAdd" style="text-align: center; vertical-align: middle">
+              <span>Add to Watchlist</span>
+            </button>
+            <button type="button" class="btn btnLaunch" style="margin-left: 5px" style="text-align: center; vertical-align: middle" data-toggle="modal" data-target="#breakingBadModal">
+              <span>Watch in Hulu</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-3 p-3 bg-white rounded shadow-sm">
+        <div class="d-flex flex-row justify-content-between">
+          <h5 class="pb-2 mb-0">Golden Retriever Dad Babysits Puppies<span style="font-size: 0.75em; color: gray"> Odin and Sassa</span></h5>
+          <h5><span class="badge badge-info">Video</span></h5>
+        </div>
+        <p class="media-body text-dark pb-3 mb-0 medium lh-125 border-bottom border-gray">Sassa and her brother's and sister's spend some quality time with dad.</p>
+        <div class="media text-body pt-3">
+          <div>
+            <span class="material-icons-outlined">
+              <i class="material-icons" style="color: gray; font-size: 3em">account_circle</i>
+            </span>
+          </div>
+
+          <p class="media-body pb-3 mb-0 medium lh-125">
+            <strong class="d-block">Jennifer Garcia</strong>
+            If I had these many dogs I would never leave home!!!
+          </p>
+        </div>
+        <hr />
+        <div class="d-flex flex-row justify-content-between">
+          <p class="font-weight-light" style="display: inline">Received 4/27/2021</p>
+          <div>
+            <button type="button" class="btn btnAdd" style="text-align: center; vertical-align: middle">
+              <span>Add to Watchlist</span>
+            </button>
+            <button type="button" class="btn btnLaunch" style="margin-left: 5px" style="text-align: center; vertical-align: middle" data-toggle="modal" data-target="#breakingBadModal">
+              <span>Watch in YouTube</span>
+            </button>
           </div>
         </div>
       </div>

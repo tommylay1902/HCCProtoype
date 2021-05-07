@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
     <link rel="stylesheet" href="./css/mainpage.css" />
+    <link rel="stylesheet" href="./css/global.css" />
     <script>
       function searchNextPage() {
         const searchCriteria = document.getElementById("searchInput");
@@ -37,7 +38,7 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Notifications </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="./notification.html">Recommendations <span style="background-color: red; border-radius: 15px; padding: 3px 8px; color: white">3</span></a>
+                <a class="dropdown-item" href="./notification.html">Recommendations <span style="background-color: red; border-radius: 15px; padding: 3px 8px; color: white">4</span></a>
                 <a class="dropdown-item" href="#">Friend Requests</a>
                 <a class="dropdown-item" href="#">Other</a>
               </div>
@@ -88,35 +89,98 @@
       </div>
     </nav>
 
-    <div class="container d-flex align-items-center" style="margin-top: 5em">
-      <div class="card" style="width: 100%">
-        <div class="card-body">
-          <div class="d-flex flex-row">
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      Welcome! Have a look at the <a href="#" class="alert-link" data-toggle="modal" data-target="#welcomeModal">instructions</a> before trying out this prototype.
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="welcomeModalLabel">Welcome to Among Friends!</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Among Friends is an online service that lets you and share and receive streaming recommendations with your friends and family.
             <div>
-              <span class="material-icons-outlined">
-                <i class="material-icons" style="color: gray; font-size: 9.5em">groups</i>
-              </span>
-            </div>
-            <div>
-              <h2 class="card-title" style="font-weight: bold">Welcome to Among Friends!</h2>
-              <span>Among Friends is an online service that lets you and share and receive streaming recommendations with your friends and family.</span>
               <div style="margin-top: 2em">
-                <h3>Instructions:</h3>
+                <h3>Instructions</h3>
               </div>
-              <div>
-                <p class="card-text">In this prototype you can try the following:</p>
-                <ol>
-                  <li>Check out the inbox of received recommendations.</li>
-                  <li>Search for streaming media.</li>
-                  <li>Select an item to send recommendations.</li>
-                </ol>
-              </div>
+              <p class="card-text">In this prototype you can try the following:</p>
+              <ol>
+                <li>Check out the inbox of received recommendations.</li>
+                <li>Search for streaming media.</li>
+                <li>Select an item to send recommendations.</li>
+              </ol>
             </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Got it!</button>
           </div>
         </div>
       </div>
     </div>
 
+    <div class="container">
+      <h4 class="border-bottom border-gray pb-2 mb-0">Activity feed</h4>
+
+      <div class="my-3 p-3 bg-white rounded shadow-sm">
+        <h5 class="border-bottom border-gray pb-2 mb-3">New recommendations available!</h5>
+        <p class="media-body text-dark pb-3 mb-0 medium lh-125 border-bottom border-gray">Your friends have sent you streaming recommendations, what will you enjoy next?</p>
+        <small class="d-block text-right mt-3">
+          <a href="#">Go to Recommendations</a>
+        </small>
+      </div>
+
+      <div class="my-3 p-3 bg-white rounded shadow-sm">
+        <h5 class="border-bottom border-gray pb-2 mb-3">Friends Now Streaming</h5>
+        <p class="media-body text-dark pb-3 mb-0 medium lh-125 border-bottom border-gray">Sharing brings friends closer! Your friends have received and started streaming your recommendations:</p>
+        <div class="media text-muted pt-3">
+          <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+            <div class="d-flex justify-content-between align-items-center w-100">
+              <div class="media text-body pt-3">
+                <div>
+                  <span class="material-icons-outlined">
+                    <i class="material-icons" style="color: gray; font-size: 3em">account_circle</i>
+                  </span>
+                </div>
+
+                <p class="media-body pb-3 mb-0 medium lh-125">
+                  <strong class="d-block">Brenda Martinez</strong>
+                  Has started streaming your "New-age Rock Essentials" Spotify Playlist.
+                </p>
+              </div>
+              <a href="#">Send Message</a>
+            </div>
+          </div>
+        </div>
+        <div class="media text-muted pt-3">
+          <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+            <div class="d-flex justify-content-between align-items-center w-100">
+              <div class="media text-body pt-3">
+                <div>
+                  <span class="material-icons-outlined">
+                    <i class="material-icons" style="color: gray; font-size: 3em">account_circle</i>
+                  </span>
+                </div>
+
+                <p class="media-body pb-3 mb-0 medium lh-125">
+                  <strong class="d-block">Brian Lee</strong>
+                  Started watching "The Falcon and the Winter Soldier".
+                </p>
+              </div>
+              <a href="#">Send Message</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
