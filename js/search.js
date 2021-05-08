@@ -16,7 +16,7 @@ window.onload = function () {
   document.getElementById("title").innerText = filterValue;
 
   const buildBody = async () => {
-    const results = await fetch(`https://www.omdbapi.com/?s=${searchValue}&apikey=c6a37cad`);
+    const results = await fetch(`https://www.omdbapi.com/?s=${searchValue}&apikey=c6a37cad&type=movie`);
     const { Search } = await results.json();
     let i = 1;
 
