@@ -18,6 +18,12 @@
         window.location.href = `search.html?s=${searchCriteria.value}&searchFilter=${filter.value}`;
         return false;
       }
+
+      function searchNextPageJumbo() {
+        const searchCriteria = document.getElementById("searchInputJumbo");
+        window.location.href = `search.html?s=${searchCriteria.value}&searchFilter=${searchCriteria.value}`;
+        return false;
+      }
     </script>
   </head>
 
@@ -133,6 +139,46 @@
     </div>
 
     <div class="container">
+      <div id="Movie" class="my-3 p-3 bg-white rounded shadow-sm">
+        <div class="border-bottom border-gray d-flex flex-row">
+          <h5 class="pb-2 mb-1">Itching to share your latest streams?<span style="font-size: 0.75em; color: gray"> We have your friends on speed dial!</span></h5>
+        </div>
+        <p class="media-body text-dark p-top pb-3 mb-0 medium lh-125">Search for your stream and start sharing:</p>
+        <form id="jumboSearch" onsubmit="return searchNextPageJumbo()">
+          <div class="d-flex flex-row justify-content-center">
+            <div class="input-group">
+              <input id="searchInputJumbo" type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+              <button type="submit" class="btn btn-outline-primary">search</button>
+            </div>
+          </div>
+        </form>
+        <!-- <div class="media text-body pt-3">
+          <div>
+            <span class="material-icons-outlined">
+              <i class="material-icons" style="color: gray; font-size: 3em">account_circle</i>
+            </span>
+          </div>
+
+          <p class="media-body pb-3 mb-0 medium lh-125">
+            <strong class="d-block">Alice Brown</strong>
+            I agree, Sean Connery and Pierce Brosnan were great but you cant ignore this movie forever, watch this ASAP or else!
+          </p>
+        </div>
+        <hr />
+        <div class="d-flex flex-row justify-content-between">
+          <p class="font-weight-light" style="display: inline">Received 4/30/2021</p>
+          <div>
+            <button type="button" class="btn btnAdd" style="text-align: center; vertical-align: middle">
+              <span>Add to Watchlist</span>
+            </button>
+            <button type="button" class="btn btnLaunch" style="margin-left: 5px" style="text-align: center; vertical-align: middle" data-toggle="modal" data-target="#huluModal">
+              <span>Watch in Hulu</span>
+            </button>
+          </div>
+        </div> -->
+      </div>
+
+      <!-- Activity feed -->
       <h4 class="border-bottom border-gray pb-2 mb-0">Activity feed</h4>
 
       <div class="my-3 p-3 bg-white rounded shadow-sm">
@@ -178,6 +224,82 @@
                 <p class="media-body pb-3 mb-0 medium lh-125">
                   <strong class="d-block">Brian Lee</strong>
                   Started watching "The Falcon and the Winter Soldier".
+                </p>
+              </div>
+              <a href="#">Send Message</a>
+            </div>
+          </div>
+        </div>
+        <div class="media text-muted pt-3">
+          <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+            <div class="d-flex justify-content-between align-items-center w-100">
+              <div class="media text-body pt-3">
+                <div>
+                  <span class="material-icons-outlined">
+                    <i class="material-icons" style="color: gray; font-size: 3em">account_circle</i>
+                  </span>
+                </div>
+
+                <p class="media-body pb-3 mb-0 medium lh-125">
+                  <strong class="d-block">Grace Roberts</strong>
+                  Finished watching "The Mandalorian" Season 2.
+                </p>
+              </div>
+              <a href="#">Send Message</a>
+            </div>
+          </div>
+        </div>
+        <div class="media text-muted pt-3">
+          <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+            <div class="d-flex justify-content-between align-items-center w-100">
+              <div class="media text-body pt-3">
+                <div>
+                  <span class="material-icons-outlined">
+                    <i class="material-icons" style="color: gray; font-size: 3em">account_circle</i>
+                  </span>
+                </div>
+
+                <p class="media-body pb-3 mb-0 medium lh-125">
+                  <strong class="d-block">Lex Anderson</strong>
+                  Streamed your "LOLs Fails Playlist".
+                </p>
+              </div>
+              <a href="#">Send Message</a>
+            </div>
+          </div>
+        </div>
+        <div class="media text-muted pt-3">
+          <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+            <div class="d-flex justify-content-between align-items-center w-100">
+              <div class="media text-body pt-3">
+                <div>
+                  <span class="material-icons-outlined">
+                    <i class="material-icons" style="color: gray; font-size: 3em">account_circle</i>
+                  </span>
+                </div>
+
+                <p class="media-body pb-3 mb-0 medium lh-125">
+                  <strong class="d-block">Maria Rodriguez</strong>
+                  Started watching your "Stranger Things" series recommendation.
+                </p>
+              </div>
+              <a href="#">Send Message</a>
+            </div>
+          </div>
+        </div>
+        <div class="media text-muted pt-3">
+          <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+            <div class="d-flex justify-content-between align-items-center w-100">
+              <div class="media text-body pt-3">
+                <div>
+                  <span class="material-icons-outlined">
+                    <i class="material-icons" style="color: gray; font-size: 3em">account_circle</i>
+                  </span>
+                </div>
+
+                <p class="media-body pb-3 mb-0 medium lh-125">
+                  <strong class="d-block">Jean Levi</strong>
+                  Started watching your "Guardiand of the Galaxy Vol. 2" recommendation.
                 </p>
               </div>
               <a href="#">Send Message</a>
